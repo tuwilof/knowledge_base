@@ -41,8 +41,9 @@ Referenced by:
 
 &#x20;по сравнению с корректной
 
-<pre class="language-sql"><code class="lang-sql"><strong>xx=> \d xx
-</strong>                                Таблица "xx"
+```sql
+xx=> \d xx
+                                Таблица "xx"
   Столбец   |           Тип            | Правило сортировки | Допустимость NULL |    По умолчанию    
 ------------+--------------------------+--------------------+-------------------+--------------------
  id         | uuid                     |                    | not null          | uuid_generate_v4()
@@ -54,7 +55,7 @@ Referenced by:
     "xx" PRIMARY KEY, btree (id)
 Ссылки извне:
     TABLE "xx" CONSTRAINT "xx" FOREIGN KEY (xx) REFERENCES xx(id) ON DELETE CASCADE
-</code></pre>
+```
 
 {% embed url="https://stackoverflow.com/questions/39378089/how-do-i-set-a-default-value-for-a-uuid-primary-key-column-in-postgres" %}
 
