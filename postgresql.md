@@ -23,7 +23,7 @@ DETAIL:  Failing row contains (null, xx, xx, 2023-06-01 08:13:16.922629+00, 2023
 В моем случае я обнаружил что в проблемной базе была разница
 
 ```sql
-online_zone=> \d xx
+xx=> \d xx
                    Table "xx"
    Column   |           Type           | Collation | Nullable | Default
 ------------+--------------------------+-----------+----------+---------
@@ -41,9 +41,8 @@ Referenced by:
 
 &#x20;по сравнению с корректной
 
-```sql
-online_zone=> \d xx
-                                Таблица "xx"
+<pre class="language-sql"><code class="lang-sql"><strong>xx=> \d xx
+</strong>                                Таблица "xx"
   Столбец   |           Тип            | Правило сортировки | Допустимость NULL |    По умолчанию    
 ------------+--------------------------+--------------------+-------------------+--------------------
  id         | uuid                     |                    | not null          | uuid_generate_v4()
@@ -55,7 +54,7 @@ online_zone=> \d xx
     "xx" PRIMARY KEY, btree (id)
 Ссылки извне:
     TABLE "xx" CONSTRAINT "xx" FOREIGN KEY (xx) REFERENCES xx(id) ON DELETE CASCADE
-```
+</code></pre>
 
 {% embed url="https://stackoverflow.com/questions/39378089/how-do-i-set-a-default-value-for-a-uuid-primary-key-column-in-postgres" %}
 
