@@ -7,3 +7,5 @@
 * [PostgreSQL](postgresql/README.md)
   * [Решение возможных проблем](postgresql/reshenie-vozmozhnykh-problem.md)
   * [Метрики](postgresql/metriki.md)
+* [Grafana](grafana/README.md)
+  * [Импорт и экспорт Dashboard](grafana/import-i-eksport-dashboard.md)
