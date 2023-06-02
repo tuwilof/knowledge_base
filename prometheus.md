@@ -2,7 +2,7 @@
 
 ## PromQL
 
-При пострание графиком будет полезно работать PromQL
+При построение графиком будет полезно работать PromQL
 
 {% embed url="https://habr.com/ru/companies/timeweb/articles/562378/" %}
 
