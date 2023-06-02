@@ -16,8 +16,6 @@ DETAIL:  Failing row contains (null, xx, xx, 2023-06-01 08:13:16.922629+00, 2023
 
 В целом проблема не редкая
 
-{% embed url="https://stackoverflow.com/questions/66821112/rails-pgnotnullviolation-error-null-value-in-column-id-of-relation-sales" %}
-
 {% embed url="https://github.com/zdennis/activerecord-import/issues/138?ysclid=licsm5jlv3616900093" %}
 
 В моем случае я обнаружил что в проблемной базе была разница

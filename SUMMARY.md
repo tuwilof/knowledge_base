@@ -2,3 +2,4 @@
 
 * [Введение](README.md)
 * [PostgreSQL](postgresql.md)
+* [Prometheus](prometheus.md)
