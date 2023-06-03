@@ -70,15 +70,29 @@ def long(table_name)
   res.pluck('created_at').last.to_i
 end
 
-def recently(table_name)
-  return 0 if TABLES_WITHOUT_CREATED_AT.include?(table_name)
-
-  sql = 'SELECT created_at FROM ? ORDER BY created_at DESC LIMIT 1'
-  res = ActiveRecord::Base.connection.execute(ActiveRecord::Base.sanitize_sql_array([sql, table_name]).delete("'"))
-  res.pluck('created_at').last.to_i
+def recently
+  Time.current.to_i
 end
 
-recently(table_name) - long(table_name)
+recently - long(table_name)
+```
+
+Но на старых версиях Ruby так не получится и вместо
+
+```ruby
+res.pluck('created_at').last.to_i
+```
+
+&#x20;надо делать так
+
+```ruby
+Time.new(res.pluck('created_at').last).to_i
+```
+
+точнее с учетом негативных кейсов так
+
+```ruby
+res.pluck('created_at').last.nil? ? res.pluck('created_at').last.to_i : Time.new(res.pluck('created_at').last).to_i
 ```
 
 #### Размер базы данных
