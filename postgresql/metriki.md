@@ -70,11 +70,15 @@ def long(table_name)
   res.pluck('created_at').last.to_i
 end
 
-def recently
-  Time.current.to_i
+def recently(table_name)
+  return 0 if TABLES_WITHOUT_CREATED_AT.include?(table_name)
+
+  sql = 'SELECT created_at FROM ? ORDER BY created_at DESC LIMIT 1'
+  res = ActiveRecord::Base.connection.execute(ActiveRecord::Base.sanitize_sql_array([sql, table_name]).delete("'"))
+  res.pluck('created_at').last.to_i
 end
 
-recently - long(table_name)
+recently(table) - long(table)
 ```
 
 Но на старых версиях Ruby так не получится и вместо
