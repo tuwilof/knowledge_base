@@ -11,3 +11,5 @@
   * [Импорт и экспорт Dashboard](grafana/import-i-eksport-dashboard.md)
 * [Rails](rails/README.md)
   * [С чего начать новый проект](rails/s-chego-nachat-novyi-proekt.md)
+* [Systemd](systemd/README.md)
+  * [Решение возможных проблем](systemd/reshenie-vozmozhnykh-problem.md)
