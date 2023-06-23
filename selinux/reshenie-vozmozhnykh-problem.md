@@ -19,6 +19,8 @@ host: "xx.xx.io"
 sudo setenforce 0
 ```
 
+но выключать его небезопасно, и проблема вернется при перезагрузке
+
 Хорошая подробная статья&#x20;
 
 {% embed url="https://nts.strzibny.name/allowing-nginx-to-use-a-pumaunicorn-unix-socket-with-selinux/" %}
