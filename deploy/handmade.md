@@ -7,7 +7,7 @@
 по инстуркциям по ссылкам ниже
 * [Nginx](../nginx/install.md)
 * [Git](../git/install.md)
-* [Rbenv](..)
+* [Rbenv](../ruby/install.md)
 
 
 

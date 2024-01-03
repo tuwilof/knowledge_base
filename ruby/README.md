@@ -1,3 +1,3 @@
 ## Ruby
 
-### Установка rbenv
+### [Установка rbenv](install.md)

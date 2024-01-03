@@ -5,4 +5,7 @@
 ### [Установка Git на Ubuntu](git/install.md)
 ## [Nginx](nginx)
 ### [Установка nginx](nginx/install.md)
-## [Deploy](deploy)
+## [Ruby](ruby/README.md)
+### [Установка rbenv на Ubuntu](ruby/install.md)
+## [Deploy](deploy/README.md)
+### [Ручной деплой](deploy/handmade.md)
