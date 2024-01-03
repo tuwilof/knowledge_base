@@ -5,3 +5,4 @@
 ### [Установка Git на Ubuntu](git/install.md)
 ## [Nginx](nginx)
 ### [Установка nginx](nginx/install.md)
+## [Deploy](deploy)
