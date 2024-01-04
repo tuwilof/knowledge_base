@@ -113,3 +113,36 @@ less -R log/production.log
 
 #### Настройка Nginx
 
+Правим файл
+```sh
+vim /etc/nginx/sites-available/default
+```
+
+```
+upstream my_app {
+  server unix:///opt/xx_backend/tmp/sockets/xx.sock;
+}
+
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        server_name _;
+
+        location / {
+          proxy_pass http://my_app;
+        }
+```
+
+и перезагружаем nginx
+
+```sh
+sudo service nginx restart
+```
+
+првоеряем в браузере заглушка пропала
+
+и проверяем локально curl
+```sh
+curl -v http://185.188.182.36/ 'https://api.xx.ru/notifications'
+```
