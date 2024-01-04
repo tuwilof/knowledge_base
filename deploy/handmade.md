@@ -9,6 +9,7 @@
 * [Git](../git/install.md)
 * [Rbenv](../ruby/install.md)
 
+#### Настройка Rails
 Установим гем bundler
 ```
 gem install bundler
@@ -58,9 +59,57 @@ production:
   host: localhost
   database: xx
   username: xx
+  password: xx
 ```
 
-создаем бд
+запускаем консоль проекта
 ```sh
-RAILS_ENV=production rails db:create
+RAILS_ENV=production bundle e rails c
 ```
+
+выполняем миграции
+```sh
+RAILS_ENV=production bundle e rails db:migrate
+```
+
+надо создать
+```sh
+vim config/master.key 
+```
+
+и прописать там содержимое локального файла из `.gitignore`
+```sh
+cat config/master.key 
+```
+
+Установить curl
+```sh
+sudo apt-get install curl
+```
+
+и tmux
+```
+sudo apt-get install tmux
+```
+
+и через него
+```
+tmux attach || tmux new
+```
+
+Можете проверить
+```sh
+RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/tmp/sockets/xx.sock
+```
+
+```sh
+curl -v --unix-socket /opt/xx_backend/tmp/sockets/xx.sock 'http://api.xx.ru/notifications'
+```
+
+и можете проверять логи тут
+```sh
+less -R log/production.log
+```
+
+#### Настройка Nginx
+

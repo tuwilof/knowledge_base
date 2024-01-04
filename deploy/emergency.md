@@ -550,3 +550,98 @@ Installing ri documentation for unf_ext-0.0.8.2
 Done installing documentation for unf_ext after 0 seconds
 1 gem installed
 ```
+
+#### Отсутствует postgis расширение extension для PostgreSQL
+
+Например при выполнении миграций
+```sh
+root@vm2540275:/opt/xx_backend# RAILS_ENV=production bundle e rails db:migrate
+..
+== 20231002184303 AddPointToParties: migrating ================================
+-- enable_extension("postgis")
+rails aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+
+PG::UndefinedFile: ERROR:  could not open extension control file "/usr/share/postgresql/12/extension/postgis.control": No such file or directory
+/opt/xx_backend/db/migrate/20231002184303_add_point_to_parties.rb:3:in `change'
+
+Caused by:
+ActiveRecord::StatementInvalid: PG::UndefinedFile: ERROR:  could not open extension control file "/usr/share/postgresql/12/extension/postgis.control": No such file or directory
+/opt/xx_backend/db/migrate/20231002184303_add_point_to_parties.rb:3:in `change'
+
+Caused by:
+PG::UndefinedFile: ERROR:  could not open extension control file "/usr/share/postgresql/12/extension/postgis.control": No such file or directory
+/opt/xx_backend/db/migrate/20231002184303_add_point_to_parties.rb:3:in `change'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+```
+
+нужно установить для Ubuntu 20.04
+```sh
+sudo apt-get install postgis postgresql-12-postgis-3
+```
+
+и подключиться
+
+```sh
+root@vm2540275:/opt/xx_backend# psql -U postgres -h localhost
+```
+
+и выполнить
+```sql
+CREATE EXTENSION postgis;
+```
+
+в теории потом должно помочь, но тут что то не так
+```sql
+GRANT ALL PRIVILEGES ON DATABASE xx TO xx;
+GRANT USAGE ON SCHEMA public TO xx;
+```
+
+https://stackoverflow.com/questions/61157620/create-extension-postgis-fails
+https://stackoverflow.com/questions/22483555/postgresql-give-all-permissions-to-a-user-on-a-postgresql-database
+
+если хотите пока забить то так
+```sql
+ALTER USER "xx" with SUPERUSER CREATEDB;
+```
+
+и выполняем миграции проверяем
+```sh
+RAILS_ENV=production bundle e rails db:migrate
+```
+
+#### Если ошибки в приложение что нет secret_key_base
+
+```sh
+root@vm2540275:/opt/xx_backend# RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/tmp/sockets/xx.sock
+Puma starting in single mode...
+* Version 4.3.12 (ruby 3.1.3-p185), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: production
+* Listening on unix:///opt/xx_backend/tmp/sockets/xx.sock
+Use Ctrl-C to stop
+2024-01-04 21:32:26 +0300: Rack app error handling request { GET //notifications }
+#<ArgumentError: Missing `secret_key_base` for 'production' environment, set this string with `bin/rails credentials:edit`>
+/root/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/railties-7.0.5/lib/rails/application.rb:576:in `validate_secret_key_base'
+/root/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/railties-7.0.5/lib/rails/application.rb:419:in `secret_key_base'
+/root/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/railties-7.0.5/lib/rails/application.rb:254:in `env_config'
+/root/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/railties-7.0.5/lib/rails/engine.rb:716:in `build_request'
+/root/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/railties-7.0.5/lib/rails/application.rb:598:in `build_request'
+/root/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/railties-7.0.5/lib/rails/engine.rb:529:in `call'
+/root/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/puma-4.3.12/lib/puma/configuration.rb:228:in `call'
+/root/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/puma-4.3.12/lib/puma/server.rb:727:in `handle_request'
+/root/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/puma-4.3.12/lib/puma/server.rb:476:in `process_client'
+/root/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/puma-4.3.12/lib/puma/server.rb:332:in `block in run'
+/root/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0/gems/puma-4.3.12/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+```
+
+надо создать
+```sh
+vim config/master.key 
+```
+
+и прописать там содержимое локального файла из `.gitignore`
+```sh
+cat config/master.key 
+```
