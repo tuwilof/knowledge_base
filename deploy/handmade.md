@@ -2,8 +2,8 @@
 
 ### Ручной деплой
 
-Для деплоя Ruby приложения на Ubuntu
-установим на сервер вручную
+Для деплоя Ruby приложения
+установим на сервер на Ubuntu вручную
 по инстуркциям по ссылкам ниже
 * [Nginx](../nginx/install.md)
 * [Git](../git/install.md)
@@ -35,8 +35,32 @@ sudo apt-get install libyaml-dev
 sudo apt-get install libpq-dev
 ```
 
+для гема `unf_ext`
+```sh
+sudo apt-get install g++
+```
+
 перейдем туда и установим гемы
 ```sh
 root@vm2540275:/opt# cd xx_backend
 root@vm2540275:/opt/xx_backend# bundle
+```
+
+Если необходимо PostgreSQL
+установим на сервер на Ubuntu вручную
+по инстуркциям по ссылке ниже:
+* [PostgreSQL](../postgresql/install.md)
+
+Меняем данные для подключения к бд `config/database.yml`
+```yaml
+production:
+  <<: *default
+  host: localhost
+  database: xx
+  username: xx
+```
+
+создаем бд
+```sh
+RAILS_ENV=production rails db:create
 ```
