@@ -1,3 +1,3 @@
-## Nginx
+## 🤖 Nginx
 
 ### [Установка nginx](install.md)

@@ -1,3 +1,3 @@
-## Ruby
+## 💎 Ruby
 
 ### [Установка rbenv](install.md)
