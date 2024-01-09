@@ -14,3 +14,5 @@
 ### [Установка PostgreSQL на Ubuntu](postgresql/install.md)
 ## [📑 Visual Studio Code](vscode/README.md)
 ### [Настроить запуск в консоли](vscode/setting.md)
+## [💻 Tmux](tmux/README.md)
+### [Как открыть новое или предыдущее окно](tmux/comand.md)
