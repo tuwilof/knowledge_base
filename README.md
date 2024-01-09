@@ -12,3 +12,5 @@
 ### [Возможные ошибки](deploy/emergency.md)
 ## [PostgreSQL](postgresql/README.md)
 ### [Установка PostgreSQL на Ubuntu](postgresql/install.md)
+## [Visual Studio Code](vscode/README.md)
+### [Настроить запуск в консоли](vscode/setting.md)
