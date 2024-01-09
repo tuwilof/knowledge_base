@@ -90,7 +90,16 @@ rbenv install 3.1.3
 
 Тем не менее у меня не выставлялась версия ruby с помощью rbenv
 
-Пришлось в файл .bash_profile еще добавить
+```sh
+ubuntu@ubuntu-std2-1-1-10gb:~$ rbenv global 3.1.3
+ubuntu@ubuntu-std2-1-1-10gb:~$ ruby -v
+Command 'ruby' not found, but can be installed with:
+sudo snap install ruby  # version 3.3.0, or
+sudo apt  install ruby  # version 1:3.0~exp1
+See 'snap info ruby' for additional versions.
+```
+
+пришлось в файл `.bash_profile` или `.bashrc` еще добавить
 
 ```sh
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -98,3 +107,5 @@ eval "$(rbenv init -)"
 ```
 
 https://stackoverflow.com/questions/10940736/rbenv-not-changing-ruby-version
+
+потом по идеи уже версию не надо устанавливать, хотя если еще не делали можно проверить
