@@ -21,8 +21,17 @@ gem install bundler
 для этого подойте каталог `/opt`:
 
 ```sh
-root@vm2540275:~# cd /opt
-root@vm2540275:/opt# git clone git@gitlab.com:xx/xx_backend.git
+ubuntu@ubuntu:~# cd /opt
+ubuntu@ubuntu:/opt# git clone git@gitlab.com:xx/xx_backend.git
+```
+
+А так же лучше сразу сделать подпапку, подпапки:
+```sh
+ubuntu@ubuntu:~$ cd /opt
+ubuntu@ubuntu:/opt$ sudo mkdir xx_backend
+ubuntu@ubuntu:/opt$ sudo mkdir releases
+ubuntu@ubuntu:/opt/releases$ sudo mkdir 202301110150
+ubuntu@ubuntu:/opt/releases$ sudo git clone --branch master https://gitlab.com/xx/xx_backend.git /opt/releases/202301110150
 ```
 
 прежде чем устанавливать гемы, могут понадобиться зависимости
@@ -43,8 +52,8 @@ sudo apt-get install g++
 
 перейдем туда и установим гемы
 ```sh
-root@vm2540275:/opt# cd xx_backend
-root@vm2540275:/opt/xx_backend# bundle
+ubuntu@ubuntu:/opt# cd xx_backend
+ubuntu@ubuntu:/opt/xx_backend# bundle
 ```
 
 Если необходимо PostgreSQL
