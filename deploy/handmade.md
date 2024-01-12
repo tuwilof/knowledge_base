@@ -7,7 +7,6 @@
 по инстуркциям по ссылкам ниже
 * [Nginx](../nginx/install.md)
 * [Git](../git/install.md)
-* [Rbenv](../ruby/install.md)
 
 #### Настройка Rails
 Установим гем bundler
@@ -15,23 +14,47 @@
 gem install bundler
 ```
 
+Создаем на сервере нового пользователя deployer
+
+только предварительно проверьте наличие настройки
+```sh
+$ cat /etc/login.defs | grep CREATE_HOME
+```
+если нет то добавьте
+```
+CREATE_HOME yes
+```
+
+```sh
+$ sudo useradd deployer
+```
+в файле `/etc/sudoers` прописываем ему что бы отключить пароль от sudo
+
+```sh
+deployer    ALL=(ALL)       NOPASSWD: ALL
+```
+
+заходим под него
+```sh
+sudo su deployer
+bash
+```
+
+и устанавливаем под новым пользователем [Rbenv](../ruby/install.md) по инструкции по этой ссылке
+
 Предположим что вы уже используете систему контроля версий Git,
 и у вас уже есть удаленный репозиторий где размещен код проекта.
 Поэтому теперь зайдем на сервер и вытяним код на тачку проекта
-для этого подойте каталог `/opt`:
-
+для этого подойте каталог `/opt`
+а так же лучше сразу сделать подпапку, подпапки:
 ```sh
-ubuntu@ubuntu:~# cd /opt
-ubuntu@ubuntu:/opt# git clone git@gitlab.com:xx/xx_backend.git
-```
-
-А так же лучше сразу сделать подпапку, подпапки:
-```sh
-ubuntu@ubuntu:~$ cd /opt
-ubuntu@ubuntu:/opt$ sudo mkdir xx_backend
-ubuntu@ubuntu:/opt$ sudo mkdir releases
-ubuntu@ubuntu:/opt/releases$ sudo mkdir 202301110150
-ubuntu@ubuntu:/opt/releases$ sudo git clone --branch master https://gitlab.com/xx/xx_backend.git /opt/releases/202301110150
+deployer@ubuntu:~$ cd /opt
+deployer@ubuntu:/opt$ mkdir xx_backend
+deployer@ubuntu:/opt$ sudo chown deployer xx_backend
+deployer@ubuntu:/opt$ cd xx_backend
+deployer@ubuntu:/opt/xx_backend$ mkdir releases
+deployer@ubuntu:/opt/xx_backend$ cd releases
+deployer@ubuntu:/opt/xx_backend/releases$ git clone --branch master https://gitlab.com/xx/xx_backend.git /opt/xx_backend/releases/202401130203
 ```
 
 прежде чем устанавливать гемы, могут понадобиться зависимости
@@ -52,8 +75,8 @@ sudo apt-get install g++
 
 перейдем туда и установим гемы
 ```sh
-ubuntu@ubuntu:/opt# cd xx_backend
-ubuntu@ubuntu:/opt/xx_backend# bundle
+deployer@ubuntu:/opt$ cd xx_backend/releases/202401130203
+deployer@ubuntu:/opt/xx_backend/releases/202401130203$ bundle
 ```
 
 Если необходимо PostgreSQL
@@ -108,7 +131,8 @@ tmux attach || tmux new
 
 Можете проверить
 ```sh
-RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/tmp/sockets/xx.sock
+mkdir /opt/xx_backend/releases/202401130203/tmp/sockets
+RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/releases/202401130203/tmp/sockets/xx.sock
 ```
 
 ```sh
@@ -124,7 +148,7 @@ less -R log/production.log
 
 Правим файл
 ```sh
-vim /etc/nginx/sites-available/default
+sudo vim /etc/nginx/sites-available/default
 ```
 
 ```
@@ -153,5 +177,5 @@ sudo service nginx restart
 
 и проверяем локально curl
 ```sh
-curl -v http://185.188.182.36/ 'https://api.xx.ru/notifications'
+curl -v http://xx.yy.zz.dd/ 'https://api.xx.ru/notifications'
 ```
