@@ -177,5 +177,5 @@ sudo service nginx restart
 
 и проверяем локально curl
 ```sh
-curl -v http://xx.yy.zz.dd/ 'https://api.xx.ru/notifications'
+curl -v http://11.22.33.44/notifications -H 'Host: my_app'
 ```
