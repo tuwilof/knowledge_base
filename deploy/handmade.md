@@ -179,3 +179,5 @@ sudo service nginx restart
 ```sh
 curl -v http://11.22.33.44/notifications -H 'Host: my_app'
 ```
+
+делаем автозапуск по инструкци [🔧 Systemd > Как настроить автозапуск через systemctl](../systemd/autostart.md)
