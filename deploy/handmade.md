@@ -181,3 +181,72 @@ curl -v http://11.22.33.44/notifications -H 'Host: my_app'
 ```
 
 делаем автозапуск по инструкци [🔧 Systemd > Как настроить автозапуск через systemctl](../systemd/autostart.md)
+
+#### Повторный деплой
+
+После того как запушили в git
+заходим на сервер под юзером deployer
+```sh
+sudo su deployer
+bash
+```
+
+и клонируем в новый каталог
+```sh
+git clone --branch master https://gitlab.com/xx/xx_backend.git /opt/xx_backend/releases/202401170118
+```
+
+переходим туда и ставим гемы
+```sh
+cd /opt/xx_backend/releases/202401170118
+bundle
+```
+
+и создаем каталог
+```sh
+mkdir /opt/xx_backend/current/tmp/sockets
+```
+
+и надо создать
+```sh
+vim config/master.key 
+```
+
+и прописать там содержимое локального файла из `.gitignore`
+```sh
+cat config/master.key 
+```
+
+и меняем ссылку
+```sh
+rm /opt/xx_backend/current
+ln -s /opt/xx_backend/releases/202401170118 /opt/xx_backend/current
+```
+
+а если еще до этого не поправили nginx
+то там тоже правим
+```sh
+sudo vim /etc/nginx/sites-available/default
+```
+
+```
+upstream api.xx.ru {
+  server unix:///opt/xx_backend/current/tmp/sockets/xx.sock;
+}
+```
+
+и перезагружаем nginx
+
+```sh
+sudo service nginx restart
+```
+
+и сам проект
+```sh
+sudo systemctl restart xx.target
+```
+
+и првоерям логи
+```sh
+sudo journalctl -u xx-web.service
+```
