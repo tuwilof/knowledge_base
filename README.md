@@ -7,6 +7,7 @@
 ### [Установка nginx](nginx/install.md)
 ## [💎 Ruby](ruby/README.md)
 ### [Установка rbenv на Ubuntu](ruby/install.md)
+### [Настройка гема rails_semantic_logger](ruby/semantic_logger.md)
 ## [🚀 Deploy](deploy/README.md)
 ### [Ручной деплой](deploy/handmade.md)
 ### [Возможные ошибки](deploy/emergency.md)
