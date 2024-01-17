@@ -46,7 +46,7 @@ ubuntu@ubuntu-std2-1-1-10gb:~$ sudo vim /etc/nginx/sites-available/default
 
 ```c
 upstream my_app {
-  server unix:///opt/xx_backend/releases/202401130203/tmp/xx.sock;
+  server unix:///opt/xx_backend/releases/202401130203/tmp/puma.sock;
 }
 
 server {

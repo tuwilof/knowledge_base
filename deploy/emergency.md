@@ -614,12 +614,12 @@ RAILS_ENV=production bundle e rails db:migrate
 #### Если ошибки в приложение что нет secret_key_base
 
 ```sh
-root@vm2540275:/opt/xx_backend# RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/tmp/xx.sock
+root@vm2540275:/opt/xx_backend# RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/tmp/puma.sock
 Puma starting in single mode...
 * Version 4.3.12 (ruby 3.1.3-p185), codename: Mysterious Traveller
 * Min threads: 5, max threads: 5
 * Environment: production
-* Listening on unix:///opt/xx_backend/tmp/xx.sock
+* Listening on unix:///opt/xx_backend/tmp/puma.sock
 Use Ctrl-C to stop
 2024-01-04 21:32:26 +0300: Rack app error handling request { GET //notifications }
 #<ArgumentError: Missing `secret_key_base` for 'production' environment, set this string with `bin/rails credentials:edit`>

@@ -27,7 +27,7 @@ WorkingDirectory=/opt/xx_backend/current
 User=deployer
 StandardOutput=journal
 StandardError=journal
-ExecStart=/home/deployer/.rbenv/bin/rbenv exec bundle exec puma -b unix:///opt/xx_backend/current/tmp/xx.sock
+ExecStart=/home/deployer/.rbenv/bin/rbenv exec bundle exec puma -b unix:///opt/xx_backend/current/tmp/puma.sock
 
 [Install]
 WantedBy=xx.target

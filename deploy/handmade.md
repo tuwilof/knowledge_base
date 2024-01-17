@@ -137,11 +137,11 @@ tmux attach || tmux new
 Можете проверить
 ```sh
 mkdir /opt/xx_backend/current/tmp
-RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/current/tmp/xx.sock
+RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/current/tmp/puma.sock
 ```
 
 ```sh
-curl -v --unix-socket /opt/xx_backend/current/tmp/xx.sock 'http://api.xx.ru/notifications'
+curl -v --unix-socket /opt/xx_backend/current/tmp/puma.sock 'http://api.xx.ru/notifications'
 ```
 
 и можете проверять логи тут
@@ -158,7 +158,7 @@ sudo vim /etc/nginx/sites-available/default
 
 ```
 upstream my_app {
-  server unix:///opt/xx_backend/current/tmp/xx.sock;
+  server unix:///opt/xx_backend/current/tmp/puma.sock;
 }
 
 server {
