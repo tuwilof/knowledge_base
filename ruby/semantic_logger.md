@@ -1,6 +1,6 @@
 ## 💎 Ruby
 
-### Настройка гема rails_semantic_logger
+### Настройка rails_semantic_logger
 
 Ставим гем [rails_semantic_logger](https://github.com/reidmorrison/rails_semantic_logger)
 ```
