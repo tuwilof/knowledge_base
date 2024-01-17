@@ -18,4 +18,4 @@
 ## [💻 Tmux](tmux/README.md)
 ### [Как открыть новое или предыдущее окно](tmux/comand.md)
 ## [🔧 Systemd](systemd/README.md)
-### [Как настроить запуск через systemctl](systemd/autostart.md)
+### [Как настроить запуск через systemctl](systemd/start.md)
