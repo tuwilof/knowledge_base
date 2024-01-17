@@ -136,7 +136,7 @@ RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/releases/2024011302
 ```
 
 ```sh
-curl -v --unix-socket /opt/xx_backend/tmp/sockets/xx.sock 'http://api.xx.ru/notifications'
+curl -v --unix-socket /opt/xx_backend/releases/202401130203/tmp/sockets/xx.sock 'http://api.xx.ru/notifications'
 ```
 
 и можете проверять логи тут
@@ -153,7 +153,7 @@ sudo vim /etc/nginx/sites-available/default
 
 ```
 upstream my_app {
-  server unix:///opt/xx_backend/tmp/sockets/xx.sock;
+  server unix:///opt/xx_backend/releases/202401130203/tmp/sockets/xx.sock;
 }
 
 server {
