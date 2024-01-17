@@ -136,12 +136,12 @@ tmux attach || tmux new
 
 Можете проверить
 ```sh
-mkdir /opt/xx_backend/current/tmp/sockets
-RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/current/tmp/sockets/xx.sock
+mkdir /opt/xx_backend/current/tmp
+RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/current/tmp/xx.sock
 ```
 
 ```sh
-curl -v --unix-socket /opt/xx_backend/current/tmp/sockets/xx.sock 'http://api.xx.ru/notifications'
+curl -v --unix-socket /opt/xx_backend/current/tmp/xx.sock 'http://api.xx.ru/notifications'
 ```
 
 и можете проверять логи тут
@@ -158,7 +158,7 @@ sudo vim /etc/nginx/sites-available/default
 
 ```
 upstream my_app {
-  server unix:///opt/xx_backend/current/tmp/sockets/xx.sock;
+  server unix:///opt/xx_backend/current/tmp/xx.sock;
 }
 
 server {
@@ -212,11 +212,6 @@ ln -s /opt/xx_backend/releases/202401170118 /opt/xx_backend/current
 ```sh
 cd /opt/xx_backend/current
 bundle
-```
-
-создаем каталог
-```sh
-mkdir /opt/xx_backend/current/tmp/sockets
 ```
 
 надо создать ключ для секретов
