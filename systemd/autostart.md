@@ -2,12 +2,7 @@
 
 ### Как настроить автозапуск через systemctl
 
-Если еще не сделали ссылку для приложения то заводим
-```sh
-ln -s /opt/xx_backend/releases/202401130203 /opt/xx_backend/current
-```
-
-создадим два файла xx.target и xx-web.service с такими содержимыми
+Создадим два файла xx.target и xx-web.service с такими содержимыми
 
 для xx.target
 ```sh

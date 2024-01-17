@@ -57,6 +57,11 @@ deployer@ubuntu:/opt/xx_backend$ cd releases
 deployer@ubuntu:/opt/xx_backend/releases$ git clone --branch master https://gitlab.com/xx/xx_backend.git /opt/xx_backend/releases/202401130203
 ```
 
+и сразу делаем ссылку для приложения
+```sh
+ln -s /opt/xx_backend/releases/202401130203 /opt/xx_backend/current
+```
+
 прежде чем устанавливать гемы, могут понадобиться зависимости
 например для корректной установки гема `psych` надо установить
 ```sh
@@ -75,8 +80,8 @@ sudo apt-get install g++
 
 перейдем туда и установим гемы
 ```sh
-deployer@ubuntu:/opt$ cd xx_backend/releases/202401130203
-deployer@ubuntu:/opt/xx_backend/releases/202401130203$ bundle
+deployer@ubuntu:/opt$ cd xx_backend/current
+deployer@ubuntu:/opt/xx_backend/current$ bundle
 ```
 
 Если необходимо PostgreSQL
@@ -131,12 +136,12 @@ tmux attach || tmux new
 
 Можете проверить
 ```sh
-mkdir /opt/xx_backend/releases/202401130203/tmp/sockets
-RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/releases/202401130203/tmp/sockets/xx.sock
+mkdir /opt/xx_backend/current/tmp/sockets
+RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/current/tmp/sockets/xx.sock
 ```
 
 ```sh
-curl -v --unix-socket /opt/xx_backend/releases/202401130203/tmp/sockets/xx.sock 'http://api.xx.ru/notifications'
+curl -v --unix-socket /opt/xx_backend/current/tmp/sockets/xx.sock 'http://api.xx.ru/notifications'
 ```
 
 и можете проверять логи тут
@@ -153,7 +158,7 @@ sudo vim /etc/nginx/sites-available/default
 
 ```
 upstream my_app {
-  server unix:///opt/xx_backend/releases/202401130203/tmp/sockets/xx.sock;
+  server unix:///opt/xx_backend/current/tmp/sockets/xx.sock;
 }
 
 server {
@@ -196,47 +201,34 @@ bash
 git clone --branch master https://gitlab.com/xx/xx_backend.git /opt/xx_backend/releases/202401170118
 ```
 
-переходим туда и ставим гемы
-```sh
-cd /opt/xx_backend/releases/202401170118
-bundle
-```
-
-и создаем каталог
-```sh
-mkdir /opt/xx_backend/current/tmp/sockets
-```
-
-и надо создать
-```sh
-vim config/master.key 
-```
-
-и прописать там содержимое локального файла из `.gitignore`
-```sh
-cat config/master.key 
-```
-
 и меняем ссылку
 ```sh
 rm /opt/xx_backend/current
 ln -s /opt/xx_backend/releases/202401170118 /opt/xx_backend/current
 ```
 
-а если еще до этого не поправили nginx
-то там тоже правим
+переходим туда и ставим гемы
 ```sh
-sudo vim /etc/nginx/sites-available/default
+cd /opt/xx_backend/current
+bundle
 ```
 
-```
-upstream api.xx.ru {
-  server unix:///opt/xx_backend/current/tmp/sockets/xx.sock;
-}
+создаем каталог
+```sh
+mkdir /opt/xx_backend/current/tmp/sockets
 ```
 
-и перезагружаем nginx
+надо создать ключ для секретов
+```sh
+vim config/master.key 
+```
 
+прописать там содержимое локального файла из `.gitignore`
+```sh
+cat config/master.key 
+```
+
+перезагружаем nginx
 ```sh
 sudo service nginx restart
 ```
@@ -246,7 +238,7 @@ sudo service nginx restart
 sudo systemctl restart xx.target
 ```
 
-и првоерям логи
+проверям логи
 ```sh
 sudo journalctl -u xx-web.service
 ```
