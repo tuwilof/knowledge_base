@@ -109,3 +109,8 @@ eval "$(rbenv init -)"
 https://stackoverflow.com/questions/10940736/rbenv-not-changing-ruby-version
 
 потом по идеи уже версию не надо устанавливать, хотя если еще не делали можно проверить
+
+установим гем bundler
+```sh
+gem install bundler
+```

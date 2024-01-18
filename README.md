@@ -13,6 +13,7 @@
 ### [Ручной деплой Ruby on Rails](deploy/handmade.md)
 ### [Возможные ошибки](deploy/emergency.md)
 ### [Ручной деплой статики](deploy/static.md)
+### [Создаем на сервере нового пользователя deployer](deploy/deployer.md)
 ## [🐘 PostgreSQL](postgresql/README.md)
 ### [Установка PostgreSQL на Ubuntu](postgresql/install.md)
 ## [📑 Visual Studio Code](vscode/README.md)
