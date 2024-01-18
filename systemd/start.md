@@ -48,7 +48,7 @@ Environment=RAILS_ENV=production
 запускаем и проверяем
 ```sh
 ubuntu@ubuntu-std2-1-1-10gb:~$ sudo systemctl start xx.target
-ubuntu@ubuntu-std2-1-1-10gb:~$ systemctl | grep party
+ubuntu@ubuntu-std2-1-1-10gb:~$ systemctl | grep xx
   xx-web.service                                                      loaded active running   xx service
   xx.target                                                           loaded active active    Run xx
 ```

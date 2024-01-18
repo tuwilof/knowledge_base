@@ -70,7 +70,7 @@ sudo apt-get install postgis postgresql-12-postgis-3
 
 и подключиться
 ```sh
-root@vm2540275:/opt/partymatch_backend# psql -U postgres -h localhost
+root@vm2540275:/opt/xx_backend# psql -U postgres -h localhost
 ```
 
 и выполнить

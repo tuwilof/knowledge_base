@@ -130,20 +130,25 @@ less -R log/production.log
 sudo vim /etc/nginx/sites-available/default
 ```
 
-```
-upstream my_app {
-  server unix:///opt/xx_backend/current/tmp/puma.sock;
+```lua
+upstream xx_backend {
+        server unix:///opt/xx_backend/current/tmp/puma.sock;
 }
 
 server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
+        listen 80;
 
-        server_name _;
+        server_name api.xx.ru;
+
+        proxy_set_header Host $host;
 
         location / {
-          proxy_pass http://my_app;
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                #try_files $uri $uri/ =404;
+                proxy_pass http://xx_backend;
         }
+}
 ```
 
 и перезагружаем nginx

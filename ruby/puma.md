@@ -36,5 +36,5 @@ ExecStart=/home/deployer/.rbenv/bin/rbenv exec bundle exec puma -C config/xx.rb
 и перезагружаем
 ```sh
 sudo systemctl daemon-reload
-sudo systemctl restart partymatch-web.service
+sudo systemctl restart xx-web.service
 ```

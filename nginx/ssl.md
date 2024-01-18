@@ -45,18 +45,20 @@ ubuntu@ubuntu-std2-1-1-10gb:~$ sudo vim /etc/nginx/sites-available/default
 ```
 
 ```c
-upstream my_app {
-  server unix:///opt/xx_backend/releases/202401130203/tmp/puma.sock;
+upstream xx_backend {
+        server unix:///opt/xx_backend/current/tmp/puma.sock;
 }
 
 server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
+        listen 80;
+        listen 443;
 
-        listen 443 default_server;
+        server_name api.xx.ru;
+
+        proxy_set_header Host $host;
 
         location / {
-                proxy_pass http://my_app;
+                proxy_pass http://xx_backend;
         }
 }
 ```
@@ -115,18 +117,19 @@ sudo cp your_domain.key /etc/ssl/
 sudo vim /etc/nginx/sites-available/default
 ```
 
-добавляем и убираем выше добавленное `listen 443 default_server;`
-```
+```lua
 server {
         listen 443 ssl;
 
-        ssl_certificate /etc/ssl/your_domain.crt;
-        ssl_certificate_key /etc/ssl/your_domain.key;
+        ssl_certificate /etc/ssl/xx.crt;
+        ssl_certificate_key /etc/ssl/xx.key;
 
-        server_name _;
+        server_name api.xx.ru;
+
+        proxy_set_header Host $host;
 
         location / {
-                proxy_pass http://api.xx.ru;
+                proxy_pass http://xx_backend;
         }
 }
 ```
