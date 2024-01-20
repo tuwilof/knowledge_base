@@ -16,6 +16,7 @@
 ### [Создаем на сервере нового пользователя deployer](deploy/deployer.md)
 ## [🐘 PostgreSQL](postgresql/README.md)
 ### [Установка PostgreSQL на Ubuntu](postgresql/install.md)
+### [Работа с backup](postgresql/backup.md)
 ## [📑 Visual Studio Code](vscode/README.md)
 ### [Настроить запуск в консоли](vscode/setting.md)
 ## [💻 Tmux](tmux/README.md)
