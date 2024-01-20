@@ -25,5 +25,5 @@
 ## [🔧 Systemd](systemd/README.md)
 ### [Как настроить запуск через systemctl](systemd/start.md)
 ## [🚚 SCP](scp/README.md)
-### [Скачивание](scp/dowload.md)
+### [Скачивание](scp/download.md)
 ### [Загрузка](scp/upload.md)
