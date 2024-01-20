@@ -101,10 +101,7 @@ https://help.reg.ru/support/ssl-sertifikaty/3-etap-ustanovka-ssl-sertifikata/kak
 your_domain.crt
 your_domain.key
 
-```sh
-scp your_domain.crt ubuntu@11.22.33.44:~
-scp your_domain.key ubuntu@11.22.33.44:~
-```
+по инстуркции [🚚 SCP > Загрузка](../scp/upload.md)
 
 переносим в папку `/etc/ssl/`
 ```sh
