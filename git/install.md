@@ -14,5 +14,5 @@ sudo apt-get update
 
 а затем уже
 ```sh
-sudo apt-get install git
+sudo apt-get install -y git
 ```

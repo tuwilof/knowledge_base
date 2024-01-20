@@ -169,7 +169,7 @@ root@vm2540275:/opt/xx_backend#
 
 надо установить
 ```sh
-sudo apt-get install libyaml-dev
+sudo apt-get install -y libyaml-dev
 ```
 
 https://stackoverflow.com/questions/14986663/gem-install-psych-error
@@ -407,7 +407,7 @@ root@vm2540275:/opt/xx_backend#
 
 ну тут в общем в ошибке все написанно, надо установить
 ```sh
-sudo apt-get install libpq-dev
+sudo apt-get install -y libpq-dev
 ```
 
 и затем все корректно устанавливается
@@ -537,7 +537,7 @@ root@vm2540275:/opt/xx_backend#
 
 нужно установить на Ubuntu 20.04
 ```sh
-sudo apt-get install g++
+sudo apt-get install -y g++
 ```
 
 и затем все корректно устанавливается
@@ -578,7 +578,7 @@ Tasks: TOP => db:migrate
 
 нужно установить для Ubuntu 20.04
 ```sh
-sudo apt-get install postgis postgresql-12-postgis-3
+sudo apt-get install -y postgis postgresql-12-postgis-3
 ```
 
 и подключиться

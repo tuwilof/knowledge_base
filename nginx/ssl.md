@@ -25,7 +25,7 @@ telnet: Unable to connect to remote host
 
 проверим юзается ли порт
 ```sh
-ubuntu@ubuntu-std2-1-1-10gb:~$ sudo apt-get install net-tools
+ubuntu@ubuntu-std2-1-1-10gb:~$ sudo apt-get install -y net-tools
 ubuntu@ubuntu-std2-1-1-10gb:~$ sudo netstat -tulpn
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    

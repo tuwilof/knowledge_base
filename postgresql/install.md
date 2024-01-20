@@ -5,7 +5,7 @@
 Набираем команду и соглашаемся на предложения
 
 ```sh
-sudo apt-get install postgresql
+sudo apt-get install -y postgresql
 ```
 
 набираем
@@ -65,7 +65,7 @@ psql -U xx -h localhost
 Если используете PostGIS то еще
 нужно установить для Ubuntu 20.04
 ```sh
-sudo apt-get install postgis postgresql-12-postgis-3
+sudo apt-get install -y postgis postgresql-12-postgis-3
 ```
 
 и подключиться

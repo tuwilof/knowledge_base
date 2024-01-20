@@ -38,17 +38,17 @@ ln -s /opt/xx_backend/releases/202401130203 /opt/xx_backend/current
 прежде чем устанавливать гемы, могут понадобиться зависимости
 например для корректной установки гема `psych` надо установить
 ```sh
-sudo apt-get install libyaml-dev
+sudo apt-get install -y libyaml-dev
 ```
 
 а для гема `pg` 
 ```sh
-sudo apt-get install libpq-dev
+sudo apt-get install -y libpq-dev
 ```
 
 для гема `unf_ext`
 ```sh
-sudo apt-get install g++
+sudo apt-get install -y g++
 ```
 
 перейдем туда и установим гемы
@@ -94,13 +94,10 @@ cat config/master.key
 
 Установить curl
 ```sh
-sudo apt-get install curl
+sudo apt-get install -y curl
 ```
 
-и tmux
-```
-sudo apt-get install tmux
-```
+и tmux по инструкции [💻 Tmux > Как установить tmux на Ubuntu](../tmux/install.md)
 
 и через него
 ```

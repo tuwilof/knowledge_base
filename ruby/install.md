@@ -25,8 +25,8 @@ apt install gcc
 
 например нет, устаналиваем
 ```sh
-sudo apt-get install gcc
-sudo apt-get install make
+sudo apt-get install -y gcc
+sudo apt-get install -y make
 ```
 
 теперь устанавливаем rbenv

@@ -19,6 +19,7 @@
 ## [📑 Visual Studio Code](vscode/README.md)
 ### [Настроить запуск в консоли](vscode/setting.md)
 ## [💻 Tmux](tmux/README.md)
+### [Как установить tmux на Ubuntu](tmux/install.md)
 ### [Как открыть новое или предыдущее окно](tmux/comand.md)
 ## [🔧 Systemd](systemd/README.md)
 ### [Как настроить запуск через systemctl](systemd/start.md)
