@@ -1,33 +1,32 @@
 ## 🐘 PostgreSQL
 
 ### Создание пользователя
-
-Создаем пользователя
-```sh
-sudo -u postgres createuser xx
-```
-
-подключаемся
+Подключаемся
 ```sh
 psql -U postgres -h localhost
 ```
 
-и даем права
+cоздаем пользователя
 ```sql
-ALTER USER xx CREATEDB;
+CREATE USER username;
+```
+
+даем права
+```sql
+ALTER USER username CREATEDB;
 ```
 
 создаем бд
 ```sql
-CREATE DATABASE xx;
+CREATE DATABASE databasename;
 ```
 
 меняем пароль
 ```sql
-ALTER USER xx WITH PASSWORD 'xx';
+ALTER USER username WITH PASSWORD 'password';
 ```
 
 можете проверить
 ```sh
-psql -U xx -h localhost
+psql -U username -h localhost
 ```
