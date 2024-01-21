@@ -40,10 +40,7 @@ sudo /etc/init.d/postgresql restart
 sudo apt-get install -y postgis postgresql-12-postgis-3
 ```
 
-и подключиться
-```sh
-root@vm2540275:/opt/xx_backend# psql -U postgres -h localhost
-```
+и подключиться по инструкции [🐘 PostgreSQL > Подключение к БД](connect.md)
 
 и выполнить
 ```sql
