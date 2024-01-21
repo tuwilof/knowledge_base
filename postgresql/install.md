@@ -32,35 +32,7 @@ local   all         postgres                          trust
 sudo /etc/init.d/postgresql restart
 ```
 
-Создаем пользователя
-```sh
-sudo -u postgres createuser xx
-```
-
-подключаемся
-```sh
-psql -U postgres -h localhost
-```
-
-и даем права
-```sql
-ALTER USER xx CREATEDB;
-```
-
-создаем бд
-```sql
-CREATE DATABASE xx;
-```
-
-меняем пароль
-```sql
-ALTER USER xx WITH PASSWORD 'xx';
-```
-
-можете проверить
-```sh
-psql -U xx -h localhost
-```
+создаем пользователя по инструкции [🐘 PostgreSQL > Создание пользователя](create_user.md)
 
 Если используете PostGIS то еще
 нужно установить для Ubuntu 20.04

@@ -18,6 +18,7 @@
 ### [Установка PostgreSQL на Ubuntu](postgresql/install.md)
 ### [Работа с backup](postgresql/backup.md)
 ### [Подключение к БД](postgresql/connect.md)
+### [Создание пользователя](postgresql/create_user.md)
 ## [📑 Visual Studio Code](vscode/README.md)
 ### [Настроить запуск в консоли](vscode/setting.md)
 ## [💻 Tmux](tmux/README.md)
