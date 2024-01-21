@@ -7,6 +7,7 @@ cоздаем пользователя
 ```sql
 CREATE USER username;
 ```
+подробнее https://www.postgresql.org/docs/current/sql-createuser.html
 
 даем права
 ```sql
