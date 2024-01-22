@@ -29,3 +29,5 @@
 ## [🚚 SCP](scp/README.md)
 ### [Скачивание](scp/download.md)
 ### [Загрузка](scp/upload.md)
+## [📔 Journalctl](journalctl/README.md)
+### [Чтение](journalctl/read.md)
