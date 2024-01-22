@@ -213,7 +213,4 @@ sudo service nginx restart
 sudo systemctl restart xx.target
 ```
 
-проверям логи
-```sh
-sudo journalctl -u xx-web.service
-```
+проверям логи для сервиса `xx-web.service` по инструкции [📔 Journalctl > Чтение](../journalctl/read.md)
