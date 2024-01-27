@@ -191,7 +191,7 @@ git clone --branch master https://gitlab.com/xx/xx_backend.git /opt/xx_backend/r
 
 переходим туда и ставим гемы
 ```sh
-cd /opt/xx_backend/current
+cd /opt/xx_backend/releases/202401170118
 bundle
 ```
 
