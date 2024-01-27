@@ -184,15 +184,9 @@ sudo su deployer
 bash
 ```
 
-и клонируем в новый каталог
+клонируем в новый каталог
 ```sh
 git clone --branch master https://gitlab.com/xx/xx_backend.git /opt/xx_backend/releases/202401170118
-```
-
-и меняем ссылку
-```sh
-rm /opt/xx_backend/current
-ln -s /opt/xx_backend/releases/202401170118 /opt/xx_backend/current
 ```
 
 переходим туда и ставим гемы
@@ -209,6 +203,12 @@ vim config/master.key
 прописать там содержимое локального файла из `.gitignore`
 ```sh
 cat config/master.key 
+```
+
+меняем ссылку
+```sh
+rm /opt/xx_backend/current
+ln -s /opt/xx_backend/releases/202401170118 /opt/xx_backend/current
 ```
 
 перезагружаем nginx
