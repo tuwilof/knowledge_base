@@ -31,3 +31,5 @@
 ### [Загрузка](scp/upload.md)
 ## [📔 Journalctl](journalctl/README.md)
 ### [Чтение](journalctl/read.md)
+## [📱 VK Mini Apps](vkminiapps/README.md)
+### [API](vkminiapps/api.md)
