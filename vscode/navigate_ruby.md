@@ -4,7 +4,7 @@
 
 Для этого нужно установить расширение [Ruby Solargraph](https://marketplace.visualstudio.com/items?itemName=castwide.solargraph)
 
-и гем [solargraph()]https://github.com/castwide/solargraph)
+и гем [solargraph](https://github.com/castwide/solargraph)
 
 просто
 ```sh
