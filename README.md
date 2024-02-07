@@ -21,6 +21,7 @@
 ### [Создание пользователя](postgresql/create_user.md)
 ## [📑 Visual Studio Code](vscode/README.md)
 ### [Настроить запуск в консоли](vscode/setting.md)
+### [Перейти к определению для Ruby](vscode/navigate_ruby.md)
 ## [💻 Tmux](tmux/README.md)
 ### [Как установить tmux на Ubuntu](tmux/install.md)
 ### [Как открыть новое или предыдущее окно](tmux/comand.md)
