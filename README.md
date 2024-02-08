@@ -42,3 +42,4 @@
 ### [Создание и выполнение скрипта](./bash/script.md)
 ## [⏰ Cron](./cron/README.md)
 ### [Настройка запуска](./cron/setting.md)
+### [Отладка](./cron/debug.md)
