@@ -47,3 +47,6 @@
 ## [🕊️ cURL](./curl/README.md)
 ### [Авторизация](./curl/auth.md)
 ### [Работа с WebDAV](./curl/webdav.md)
+## [🌩 WebDAV](./webdav/README.md)
+### [Бесплатный WebDAV от Яндекс Диск](./webdav/yandex.md)
+### [Возможные ошибки](./webdav/emergency.md)
