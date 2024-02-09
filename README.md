@@ -46,3 +46,4 @@
 ### [Отладка](./cron/debug.md)
 ## [🕊️ cURL](./curl/README.md)
 ### [Авторизация](./curl/auth.md)
+### [Работа с WebDAV](./curl/webdav.md)
