@@ -44,3 +44,5 @@
 ## [⏰ Cron](./cron/README.md)
 ### [Настройка запуска](./cron/setting.md)
 ### [Отладка](./cron/debug.md)
+## [🕊️ cURL](./curl/README.md)
+### [Авторизация](./curl/auth.md)
