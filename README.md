@@ -49,4 +49,5 @@
 ### [Работа с WebDAV](./curl/webdav.md)
 ## [🌩 WebDAV](./webdav/README.md)
 ### [Бесплатный WebDAV от Яндекс Диск](./webdav/yandex.md)
+### [Примонтировать WebDAV](./webdav/mount.md)
 ### [Возможные ошибки](./webdav/emergency.md)
