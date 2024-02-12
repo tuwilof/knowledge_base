@@ -48,10 +48,10 @@ sudo apt-get install -y postgis postgresql-12-postgis-3
 CREATE EXTENSION postgis;
 ```
 
-в теории потом должно помочь, но тут что то не так
+в теории потом должно помочь команды ниже от postgres к бд, но тут что то не так
 ```sql
-GRANT ALL PRIVILEGES ON DATABASE xx TO xx;
-GRANT USAGE ON SCHEMA public TO xx;
+GRANT ALL PRIVILEGES ON DATABASE dbname TO username;
+GRANT USAGE ON SCHEMA public TO username;
 ```
 
 https://stackoverflow.com/questions/61157620/create-extension-postgis-fails
@@ -59,5 +59,5 @@ https://stackoverflow.com/questions/22483555/postgresql-give-all-permissions-to-
 
 если хотите пока забить то так
 ```sql
-ALTER USER "xx" with SUPERUSER CREATEDB;
+ALTER USER username with SUPERUSER CREATEDB;
 ```
