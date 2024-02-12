@@ -41,9 +41,9 @@ sudo /etc/init.d/postgresql restart
 sudo apt-get install -y postgis postgresql-12-postgis-3
 ```
 
-и подключиться по инструкции [🐘 PostgreSQL > Подключение к БД](connect.md)
+подключиться по инструкции [🐘 PostgreSQL > Подключение к БД](connect.md)
 
-и выполнить
+выполнить
 ```sql
 CREATE EXTENSION postgis;
 ```
