@@ -21,3 +21,30 @@ umount /mnt/yandex.disk/
 
 https://manpages.ubuntu.com/manpages/bionic/man8/umount.8.html
 
+### Автоматическое монтирование после перезагрузки виртуальной машины
+
+Добавьте строки в конце файла
+
+```sh
+sudo vim /etc/davfs2/secrets
+```
+
+```
+https://webdav.yandex.ru user pass
+```
+
+```sh
+sudo vim /etc/fstab
+```
+
+```
+https://webdav.yandex.ru   /mnt/yandex.disk   davfs   rw,users,_netdev    0   0
+```
+
+проверьте после перезагрузки
+
+```sh
+cd /mnt/yandex.disk/
+ls -la
+df -h /mnt/yandex.disk/
+```
