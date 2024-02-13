@@ -7,6 +7,7 @@
 ## [🤖 Nginx](./nginx/README.md)
 ### [Установка nginx](./nginx/install.md)
 ### [Настройка SSL](./nginx/ssl.md)
+### [Проксирование](./nginx/proxy.md)
 ## [💎 Ruby](ruby/README.md)
 ### [Установка rbenv на Ubuntu](ruby/install.md)
 ### [Настройка rails_semantic_logger](ruby/semantic_logger.md)
