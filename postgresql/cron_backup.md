@@ -15,7 +15,7 @@
 
 сделайте бекап с его датой создания
 ```sh
-pg_dump -Fc partymatch -U postgres > `date +"/root/%Y%m%d%H%M%S.dump"`
+pg_dump -Fc dbname -U postgres > `date +"/root/%Y%m%d%H%M%S.dump"`
 ```
 
 проверье его
@@ -31,7 +31,7 @@ less -R /root/outputyourdate.dump
 создайте скрит `backup.sh` с командой выше по инструкции
 ```sh
 echo "Creating a backup"
-pg_dump -Fc partymatch -U postgres > `date +"/root/%Y%m%d%H%M%S.dump"`
+pg_dump -Fc dbname -U postgres > `date +"/root/%Y%m%d%H%M%S.dump"`
 ```
 
 #### Настройка cron
