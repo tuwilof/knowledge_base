@@ -64,8 +64,10 @@ sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
 
 ```sh
 cd ~
-rbenv install 3.1.3
+time rbenv install 3.1.3
 ```
+
+операция долгая, у меня выполнялась 18 минут
 
 тем не менее у меня не выставлялась версия ruby с помощью rbenv
 
