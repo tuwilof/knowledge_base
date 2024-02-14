@@ -17,12 +17,17 @@
 Поэтому теперь зайдем на сервер и вытяним код на тачку проекта
 для этого подойте каталог `/opt`
 а так же лучше сразу сделать подпапку, подпапки:
+
 ```sh
+root@ubuntu:~$ sudo su deployer
+$ bash
 deployer@ubuntu:~$ cd /opt
 deployer@ubuntu:/opt$ sudo mkdir xx_frontend
 deployer@ubuntu:/opt$ sudo chown deployer xx_frontend
 deployer@ubuntu:/opt$ cd xx_frontend
-deployer@ubuntu:/opt/xx_frontend$ git clone --branch master https://gitlab.com/xx/xx_frontend.git /opt/xx_frontend/releases/202401190040
+deployer@ubuntu:/opt/xx_frontend$ mkdir releases
+deployer@ubuntu:/opt/xx_frontend$ cd releases
+deployer@ubuntu:/opt/xx_frontend$ git clone --branch master https://gitlab.com/xx/xx_frontend.git /opt/xx_frontend/releases/202401130203
 ```
 
 и сразу делаем ссылку для приложения
@@ -34,6 +39,9 @@ ln -s /opt/xx_frontend/releases/202401130203 /opt/xx_frontend/current
 #### Настройка Nginx
 
 Правим файл
+
+для предварительной настройки ssl воспользуйтесь инструкцией [🤖 Nginx > Настройка SSL](../nginx/ssl.md)
+
 ```sh
 sudo vim /etc/nginx/sites-available/default
 ```
@@ -73,7 +81,7 @@ server {
 sudo service nginx restart
 ```
 
-првоеряем в браузере
+проверяем в браузере, если домен уже настроили
 
 и проверяем локально curl
 ```sh

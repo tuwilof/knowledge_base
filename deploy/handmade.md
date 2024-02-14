@@ -27,6 +27,8 @@
 для этого подойте каталог `/opt`
 а так же лучше сразу сделать подпапку, подпапки:
 ```sh
+root@ubuntu:~$ sudo su deployer
+$ bash
 deployer@ubuntu:~$ cd /opt
 deployer@ubuntu:/opt$ mkdir xx_backend
 deployer@ubuntu:/opt$ sudo chown deployer xx_backend
