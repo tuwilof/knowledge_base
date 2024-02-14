@@ -89,6 +89,14 @@ eval "$(rbenv init -)"
 
 https://stackoverflow.com/questions/10940736/rbenv-not-changing-ruby-version
 
+в новой сессий стало ок
+```sh
+sudo su deployer
+bash
+cd ~
+ruby -v
+```
+
 потом по идеи уже версию не надо устанавливать, хотя если еще не делали можно проверить
 
 установим гем bundler
