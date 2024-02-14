@@ -25,6 +25,7 @@ apt install gcc
 
 например нет, устаналиваем
 ```sh
+sudo apt-get update
 sudo apt-get install -y gcc
 sudo apt-get install -y make
 ```
@@ -41,7 +42,7 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 
 https://github.com/rbenv/rbenv
 
-И конечно установим последнюю версию ruby, для этого нужно установить ruby-build
+установите последнюю версию ruby, для этого нужно установить ruby-build
 
 ```sh
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
@@ -49,46 +50,24 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 https://github.com/rbenv/ruby-build
 
-Если система голая установим дополнительные пакеты
+установите дополнительные пакеты, если система новая
 
 ```sh
 sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
 ```
 
-Так как иначе вывалится ошибка
+так как иначе будет ошибка [💎 Ruby > Возможные ошибки > Try running .. to fetch missing dependencies](./emergency.md#try-running--to-fetch-missing-dependencies)
+
+установите сами ruby, предварительно убедитесь что на машине есть минимум 768Мб оперативной памяти
+
+перейдите в домашний каталог, во избежание ошибке [💎 Ruby > Возможные ошибки > line 305: popd: /root: Permission denied](./emergency.md#line-305-popd-root-permission-denied)
 
 ```sh
-Downloading ruby-2.3.3.tar.bz2…
--> https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.3.tar.bz2
-Installing ruby-2.3.3…
-
-BUILD FAILED (Ubuntu 14.04 using ruby-build 20161121)
-
-Inspect or clean up the working tree at /tmp/ruby-build.20161127161017.2360
-Results logged to /tmp/ruby-build.20161127161017.2360.log
-
-Last 10 log lines:
-The Ruby openssl extension was not compiled.
-The Ruby readline extension was not compiled.
-The Ruby zlib extension was not compiled.
-ERROR: Ruby install aborted due to missing extensions
-Try running `apt-get install -y libssl-dev libreadline-dev zlib1g-dev` to fetch missing dependencies.
-
-Configure options used:
-— prefix=/home/vagrant/.rbenv/versions/2.3.3
-LDFLAGS=-L/home/vagrant/.rbenv/versions/2.3.3/lib
-CPPFLAGS=-I/home/vagrant/.rbenv/versions/2.3.3/include
-```
-
-Убедимся что на машине есть минимум 768Мб оперативной памяти
-
-И теперь установим сами ruby
-
-```sh
+cd ~
 rbenv install 3.1.3
 ```
 
-Тем не менее у меня не выставлялась версия ruby с помощью rbenv
+тем не менее у меня не выставлялась версия ruby с помощью rbenv
 
 ```sh
 ubuntu@ubuntu-std2-1-1-10gb:~$ rbenv global 3.1.3
