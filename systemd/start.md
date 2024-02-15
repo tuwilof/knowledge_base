@@ -32,7 +32,7 @@ ExecStart=/home/deployer/.rbenv/bin/rbenv exec bundle exec puma -b unix:///opt/x
 [Install]
 WantedBy=xx.target
 ```
-[https://gist.github.com/arteezy/5d53d99f6ee617fae1f0db0576fdd418]
+[gist.github.com#arteezy](https://gist.github.com/arteezy/5d53d99f6ee617fae1f0db0576fdd418)
 
 закидываем их на сервер по пути `/usr/lib/systemd/system/`
 
