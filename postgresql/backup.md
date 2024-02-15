@@ -41,7 +41,7 @@ CREATE DATABASE databasename OWNER username;
 GRANT ALL ON SCHEMA public TO username;
 ```
 
-в теории этого должно хватить, но у меян все равно не работает
+в теории этого должно хватить, но у меня все равно не работает
 как вариант можете дать суперюзера
 ```sql
 ALTER USER username with SUPERUSER;
