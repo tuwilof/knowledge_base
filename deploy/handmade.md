@@ -119,32 +119,20 @@ server {
         proxy_set_header Host $host;
 
         location / {
-                # First attempt to serve request as file, then
-                # as directory, then fall back to displaying a 404.
-                #try_files $uri $uri/ =404;
                 proxy_pass http://xx_backend;
         }
 }
 ```
 
-и перезагружаем nginx
+перезагружаем nginx
 
 ```sh
 sudo service nginx restart
 ```
 
-првоеряем в браузере заглушка пропала
-
-и проверяем локально curl
-```sh
-curl -v http://11.22.33.44/notifications -H 'Host: my_app'
-```
-
-
 #### Делаем запуск через Systemd
 
 Делаем запуск по инструкци [🔧 Systemd > Как настроить запуск через systemctl](../systemd/start.md)
-
 
 #### Повторный деплой
 
