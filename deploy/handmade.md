@@ -97,11 +97,6 @@ vim config/master.key
 cat config/master.key 
 ```
 
-создайте каталог
-```sh
-mkdir /opt/xx_backend/current/tmp
-```
-
 можете проверить по инструкции [💎 Ruby > Ручной запуск puma без nginx](../ruby/hand_run_puma_without_nginx.md)
 
 #### Настройка Nginx
