@@ -30,7 +30,7 @@
 root@ubuntu:~$ sudo su deployer
 $ bash
 deployer@ubuntu:~$ cd /opt
-deployer@ubuntu:/opt$ mkdir xx_backend
+deployer@ubuntu:/opt$ sudo mkdir xx_backend
 deployer@ubuntu:/opt$ sudo chown deployer xx_backend
 deployer@ubuntu:/opt$ cd xx_backend
 deployer@ubuntu:/opt/xx_backend$ mkdir releases
@@ -65,10 +65,7 @@ deployer@ubuntu:/opt$ cd xx_backend/current
 deployer@ubuntu:/opt/xx_backend/current$ bundle
 ```
 
-Если необходимо PostgreSQL
-установим на сервер на Ubuntu вручную
-по инстуркциям по ссылке ниже:
-* [PostgreSQL](../postgresql/install.md)
+если необходимо PostgreSQL, то воспользуйтесь инстуркцией  [🐘 PostgreSQL > Установка PostgreSQL на Ubuntu](../postgresql/install.md)
 
 Меняем данные для подключения к бд `config/database.yml`
 ```yaml
