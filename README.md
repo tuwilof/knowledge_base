@@ -48,6 +48,7 @@
 ### [Настройка запуска](./cron/setting.md)
 ### [Отладка](./cron/debug.md)
 ## [🕊️ cURL](./curl/README.md)
+### [Установка](./curl/install.md)
 ### [Авторизация](./curl/auth.md)
 ### [Работа с WebDAV](./curl/webdav.md)
 ## [🌩 WebDAV](./webdav/README.md)

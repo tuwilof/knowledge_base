@@ -97,10 +97,7 @@ vim config/master.key
 cat config/master.key 
 ```
 
-Установить curl
-```sh
-sudo apt-get install -y curl
-```
+установите curl по инструкции [🕊️ cURL > Установка](../curl/install.md)
 
 и tmux по инструкции [💻 Tmux > Как установить tmux на Ubuntu](../tmux/install.md)
 
