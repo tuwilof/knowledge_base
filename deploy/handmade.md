@@ -97,30 +97,7 @@ vim config/master.key
 cat config/master.key 
 ```
 
-установите curl по инструкции [🕊️ cURL > Установка](../curl/install.md)
-
-и tmux по инструкции [💻 Tmux > Как установить tmux на Ubuntu](../tmux/install.md)
-
-и через него
-```
-tmux attach || tmux new
-```
-
-Можете проверить
-```sh
-mkdir /opt/xx_backend/current/tmp
-RAILS_ENV=production bundle e puma -b unix:///opt/xx_backend/current/tmp/puma.sock
-```
-
-```sh
-curl -v --unix-socket /opt/xx_backend/current/tmp/puma.sock 'http://api.xx.ru/notifications'
-```
-
-и можете проверять логи тут
-```sh
-less -R log/production.log
-```
-
+настройте по инструкции [💎 Ruby > Ручной запуск puma без nginx](../ruby/hand_run_puma_without_nginx.md)
 
 #### Настройка Nginx
 
