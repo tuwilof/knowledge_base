@@ -25,6 +25,7 @@
 ### [Подключение к БД](./postgresql/connect.md)
 ### [Создание пользователя](./postgresql/create_user.md)
 ### [Автоматическое создание backup по расписанию](./postgresql/cron_backup.md)
+### [Возможные ошибки](./postgresql/emergency.md)
 ## [📑 Visual Studio Code](./vscode/README.md)
 ### [Настроить запуск в консоли](./vscode/setting.md)
 ### [Перейти к определению для Ruby](./vscode/navigate_ruby.md)
