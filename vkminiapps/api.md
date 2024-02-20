@@ -13,7 +13,7 @@
 #### Сообщества
 
 ##### Bridge
-[VKWebAppGetGroupInfo получает информацию о сообществах](https://dev.vk.com/ru/bridge/VKWebAppGetGroupInfo)
+[VKWebAppGetGroupInfo получает информацию о сообществах (в том числе фото сообщества)](https://dev.vk.com/ru/bridge/VKWebAppGetGroupInfo)
 
 ##### Общее
 
