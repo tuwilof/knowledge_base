@@ -22,4 +22,5 @@
 #### Виджет
 
 [Начало](https://dev.vk.com/ru/api/community-apps-widgets/getting-started)
+
 [Токен доступа](https://dev.vk.com/ru/bridge/VKWebAppGetCommunityToken)
