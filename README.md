@@ -1,9 +1,9 @@
 # База знаний
 
 **📔 Оглавление**
-* [Dev](#dev)
-* [DevOps](#devops)
-* [Product](#product)
+* **[Dev](#dev)**
+* **[DevOps](#devops)**
+* **[Product](#product)**
 
 ## Dev
 ### [🐱 Git](git)
