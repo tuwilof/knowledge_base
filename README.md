@@ -66,3 +66,5 @@
 ## Product
 ### [📱 VK Mini Apps](vkminiapps/README.md)
 #### [API](vkminiapps/api.md)
+### [🌄 VKUI](./vkui/README.md)
+#### [Ссылки](./vkui/links.md)
