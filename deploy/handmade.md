@@ -164,6 +164,11 @@ vim config/master.key
 cat config/master.key 
 ```
 
+выполните миграции, если появились новые
+```sh
+RAILS_ENV=production bundle e rails db:migrate
+```
+
 меняем ссылку
 ```sh
 rm /opt/xx_backend/current
