@@ -19,6 +19,10 @@
 
 [Объект содержит информацию о сообществе ВКонтакте](https://dev.vk.com/ru/reference/objects/group)
 
+##### Фото сообщества
+
+[photo_100 string URL главной фотографии с размером 100х100px](https://dev.vk.com/ru/reference/objects/group#photo_100)
+
 #### Виджет
 
 [Начало](https://dev.vk.com/ru/api/community-apps-widgets/getting-started)
