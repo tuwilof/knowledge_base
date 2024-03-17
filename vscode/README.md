@@ -3,4 +3,5 @@
 ### [Настроить запуск в консоли](./setting.md)
 ### [Перейти к определению для Ruby](./navigate_ruby.md)
 ### [Просмотр рендора MarkDown](./markdown.md)
+### [Просмотр рендора PlantUML](./plantuml.md)
 ### [Возможные ошибки](./emergency.md)

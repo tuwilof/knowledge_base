@@ -20,6 +20,7 @@
 #### [Настроить запуск в консоли](./vscode/setting.md)
 #### [Перейти к определению для Ruby](./vscode/navigate_ruby.md)
 #### [Просмотр рендора MarkDown](./vscode/markdown.md)
+### [Просмотр рендора PlantUML](./vscode/plantuml.md)
 #### [Возможные ошибки](./vscode/emergency.md)
 ## DevOps
 ### [🤖 Nginx](./nginx/README.md)
