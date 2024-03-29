@@ -1,5 +1,25 @@
 # База знаний
 
+* Dev
+    * [🐱 Git](#🐱-git)
+    * [💎 Ruby](#💎-ruby)
+    * [📑 Visual Studio Code](#📑-visual-studio-code)
+* DevOps
+    * [🤖 Nginx](#🤖-nginx)
+    * [🚀 Deploy](#🚀-deploy)
+    * [🐘 PostgreSQL](#🐘-postgresql)
+    * [💻 Tmux](#💻-tmux)
+    * [🔧 Systemd](#🔧-systemd)
+    * [🚚 SCP](#🚚-scp)
+    * [📔 Journalctl](#📔-journalctl)
+    * [📇 Bash](#📇-bash)
+    * [⏰ Cron](#⏰-cron)
+    * [🕊️ cURL](#🕊️-curl)
+    * [🌩 WebDAV](#🌩-webdav)
+* Product
+    * [📱 VK Mini Apps](#📱-vk-mini-apps)
+    * [🌄 VKUI](#🌄-vkui)
+
 ## [🐱 Git](git)
 ### [Настроить разную конфигурацию Git для разных проектов](git/config.md)
 ### [Установка Git на Ubuntu](git/install.md)
