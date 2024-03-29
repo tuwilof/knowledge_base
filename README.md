@@ -1,7 +1,7 @@
 # База знаний
 
 * Dev
-    * [🐱 Git](#🐱-git)
+    * [🐱 Git](#git)
     * [💎 Ruby](#💎-ruby)
     * [📑 Visual Studio Code](#📑-visual-studio-code)
 * DevOps
@@ -20,7 +20,7 @@
     * [📱 VK Mini Apps](#📱-vk-mini-apps)
     * [🌄 VKUI](#🌄-vkui)
 
-## [🐱 Git](git)
+## [Git](git)
 ### [Настроить разную конфигурацию Git для разных проектов](git/config.md)
 ### [Установка Git на Ubuntu](git/install.md)
 ### [Глобальный .gitignore](git/global_gitignore.md)
