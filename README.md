@@ -1,9 +1,9 @@
 # База знаний
 
-* [🐱 Git](./git/README.md)
-    * [Настроить разную конфигурацию Git для разных проектов](./git/config.md)
-    * [Установка Git на Ubuntu](./git/install.md)
-    * [Глобальный .gitignore](./git/global_gitignore.md)
+[🐱 Git](./git/README.md)
+* [Настроить разную конфигурацию Git для разных проектов](./git/config.md)
+* [Установка Git на Ubuntu](./git/install.md)
+* [Глобальный .gitignore](./git/global_gitignore.md)
 * [🤖 Nginx](./nginx/README.md)
     * [Установка nginx](./nginx/install.md)
     * [Настройка SSL](./nginx/ssl.md)
