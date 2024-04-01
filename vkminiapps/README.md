@@ -1,3 +1,2 @@
 ## 📱 VK Mini Apps
-
-### [API](api.md)
+* [API](./api.md)
