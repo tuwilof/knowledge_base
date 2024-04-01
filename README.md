@@ -4,7 +4,7 @@
 * [Настроить разную конфигурацию Git для разных проектов](./git/config.md)
 * [Установка Git на Ubuntu](./git/install.md)
 * [Глобальный .gitignore](./git/global_gitignore.md)
-* [Обновить форк](./update_fork.md)
+* [Обновить форк](./git/update_fork.md)
 
 [🤖 Nginx](./nginx/README.md)
 * [Установка nginx](./nginx/install.md)
