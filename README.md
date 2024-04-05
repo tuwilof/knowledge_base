@@ -78,5 +78,5 @@
 [🌄 VKUI](./vkui/README.md)
 * [Ссылки](./vkui/links.md)
 
-[🛫 Testing Mini Apps](./telegram_mini_apps/README.md)
+[🛫 Telegram Mini Apps](./telegram_mini_apps/README.md)
 * [Ссылки](./telegram_mini_apps/links.md)

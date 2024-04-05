@@ -1,2 +1,2 @@
-## 🛫 Testing Mini Apps
+## 🛫 Telegram Mini Apps
 * [Ссылки](./links.md)

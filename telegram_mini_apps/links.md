@@ -1,4 +1,4 @@
-## 🛫 Testing Mini Apps
+## 🛫 Telegram Mini Apps
 
 ### Ссылки
 
