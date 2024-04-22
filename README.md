@@ -56,6 +56,7 @@
 
 [📱 VK Mini Apps](./vkminiapps/README.md)
 * [API](./vkminiapps/api.md)
+* [Советы по функциям на разных этапах](./vkminiapps/step.md)
 
 [📇 Bash](./bash/README.md)
 * [Вывод даты в консоль](./bash/date.md)
