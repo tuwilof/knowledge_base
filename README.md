@@ -12,7 +12,8 @@
 * [Проксирование](./nginx/proxy.md)
 
 [💎 Ruby](./ruby/README.md)
-* [Установка rbenv на Ubuntu](./ruby/install.md)
+* [Установка rbenv](./ruby/install.md)
+* [Про Ruby on Rails](./ruby/rails.md)
 * [Настройка rails_semantic_logger](./ruby/semantic_logger.md)
 * [Настройка puma](./ruby/puma.md)
 * [Ручной запуск puma без nginx](./ruby/hand_run_puma_without_nginx.md)
