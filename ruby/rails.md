@@ -104,3 +104,51 @@ db_migrate:
 annotate:
 	bundle exec annotate --models
 ```
+
+#### Полезные гемы для проверки на CI
+
+##### annotate
+
+###### Добавления гема annotate
+
+Добавьте гем https://github.com/ctran/annotate_models в `Gemfile`
+
+```ruby
+gem 'annotate'
+```
+
+выполните команду
+```sh
+bundle
+```
+
+###### Добавления аннотаций в конец модели
+
+Добавьте файл `auto_annotate_models.rake` в папку `lib/tasks/` следующего содержимого 
+
+```sh
+if Rails.env.development? || Rails.env.test?
+  require 'annotate'
+
+  task set_annotation_options: :environment do
+    Annotate.set_defaults(
+      position: 'after',
+
+      show_indexes: true,
+      simple_indexes: true,
+      show_foreign_keys: true,
+      show_complete_foreign_keys: false,
+      with_comment: true
+    )
+  end
+
+  Annotate.load_tasks
+end
+```
+
+выполните [аннотации](#аннотации)
+
+#### Checklist
+
+- [ ] [добавления гема annotate](#добавления-гема-annotate)
+  - [ ] [добавления аннотаций в конец модели](#добавления-аннотаций-в-конец-модели)
