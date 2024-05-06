@@ -92,6 +92,7 @@ db_create:
 ```
 
 ##### Выполнение миграций
+
 ```sh
 db_migrate:
 	bundle exec rake db:migrate
@@ -100,9 +101,17 @@ db_migrate:
 ```
 
 ##### Аннотации
+
 ```sh
 annotate:
 	bundle exec annotate --models
+```
+
+##### Проверка аннотации
+
+```sh
+check_annotate:
+	bundle exec annotate --models --frozen
 ```
 
 #### Полезные гемы для проверки на CI
@@ -148,7 +157,86 @@ end
 
 выполните [аннотации](#аннотации)
 
+###### Проверка актуальности аннотаций на GitLab CI
+
+Добавьте make команду для [проверки аннотаций](#проверка-аннотации)
+
+и еще команду
+
+```sh
+check: check_annotate
+```
+
+настройте `database.yml`
+
+```yaml
+default: &default
+  adapter: postgis
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV.fetch('POSTGRES_USER', '') %>
+  password: <%= ENV.fetch('POSTGRES_PASSWORD', '') %>
+  host: <%= ENV.fetch('POSTGRES_HOST', 'localhost') %>
+  port: <%= ENV.fetch('POSTGRES_PORT', '5432'.to_i) %>
+  database: <%= ENV.fetch('POSTGRES_DB_NAME', 'test') %>
+```
+
+добавьте такой `.gitlab-ci.yml`
+
+```yaml
+default:
+  image: ruby:3.1.3
+
+stages:
+  - test
+
+variables:
+  KUBERNETES_CPU_LIMIT: 4
+  KUBERNETES_MEMORY_LIMIT: 8Gi
+  KUBERNETES_SERVICE_CPU_LIMIT: 4
+  KUBERNETES_SERVICE_MEMORY_LIMIT: 4Gi
+
+test:
+  variables:
+    POSTGRES_DB: backend_xx_test
+    POSTGRES_HOST: postgres
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: postgres
+    POSTGRES_PORT: '5432'
+    RAILS_ENV: test
+    GITLAB_CI: 'true'
+    TZ: 'Europe/Moscow'
+    PGTZ: 'Europe/Moscow'
+  stage: test
+  services:
+    - name: postgis/postgis:13-3.1-alpine
+      alias: postgres
+
+  cache:
+    key: gems
+    paths:
+      - vendor/ruby
+    policy: pull
+  before_script:
+    - export PATH=$PATH:/usr/local/rbenv/shims
+    - gem install bundler
+    - bundle install -j $(nproc)
+    - make db_reset
+  script:
+    - make check
+  artifacts:
+    expire_in: 1 week
+    when: always
+    reports:
+      # cobertura: coverage/coverage.xml
+      junit:
+        - ./junit/*.xml
+```
+
+закомитьте и запушьте правки, билд должен пройти
+
 #### Checklist
 
 - [ ] [добавления гема annotate](#добавления-гема-annotate)
   - [ ] [добавления аннотаций в конец модели](#добавления-аннотаций-в-конец-модели)
+  - [ ] [проверка актуальности аннотаций на IC](#проверка-актуальности-аннотаций-на-ci)
