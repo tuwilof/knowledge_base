@@ -58,6 +58,7 @@ class CreateUsers < ActiveRecord::Migration[7.1]
       t.boolean   :join_group
       t.boolean   :save_favoutire
       t.boolean   :save_display
+      t.datetime  :start_date
 
       t.timestamps
     end
