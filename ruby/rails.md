@@ -55,9 +55,10 @@ class CreateUsers < ActiveRecord::Migration[7.1]
     create_table :users do |t|
       t.integer   :vk_id
       t.string    :state
-      t.boolean   :join_group
-      t.boolean   :save_favoutire
-      t.boolean   :save_display
+      t.boolean   :join_group,     default: false
+      t.boolean   :save_favoutire, default: false
+      t.boolean   :save_display,   default: false
+      t.integer   :liked,          default: 0
       t.datetime  :start_date
 
       t.timestamps
