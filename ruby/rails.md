@@ -264,6 +264,12 @@ test:
 gem 'rspec-rails'
 ```
 
+и настройте
+
+```sh
+rails generate rspec:install
+```
+
 #### Checklist
 
 - [ ] [добавления гема annotate](#добавления-гема-annotate)
