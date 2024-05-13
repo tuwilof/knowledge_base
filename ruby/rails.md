@@ -270,6 +270,12 @@ gem 'rspec-rails'
 rails generate rspec:install
 ```
 
+##### Для дебага byebug
+
+```ruby
+gem 'byebug'
+```
+
 #### Checklist
 
 - [ ] [добавления гема annotate](#добавления-гема-annotate)
