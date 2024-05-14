@@ -276,6 +276,23 @@ rails generate rspec:install
 gem 'byebug'
 ```
 
+##### Для проверки style guide rubocop-rails
+
+Установка
+```ruby
+gem 'rubocop-rails'
+```
+
+автофрматирование
+```sh
+bundle e rubocop -A
+```
+
+сгенерировать файл со скипами того что не отавтоформатировать
+```sh
+bundle e rubocop --auto-gen-config
+```
+
 #### Checklist
 
 - [ ] [добавления гема annotate](#добавления-гема-annotate)
