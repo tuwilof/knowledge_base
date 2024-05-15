@@ -293,6 +293,12 @@ bundle e rubocop -A
 bundle e rubocop --auto-gen-config
 ```
 
+##### Красивые данные для тестов
+
+```ruby
+gem 'factory_bot_rails'
+```
+
 #### Checklist
 
 - [ ] [добавления гема annotate](#добавления-гема-annotate)
