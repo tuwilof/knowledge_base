@@ -86,6 +86,14 @@ gem 'activerecord-postgis-adapter'
 t.st_point  :point, geographic: true
 ```
 
+#### Работа с контроллерами
+
+##### Генерация контроллера
+
+```sh
+bundle e rails generate controller user
+```
+
 #### Makefile
 
 ##### Создание базы
