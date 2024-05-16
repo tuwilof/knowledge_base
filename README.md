@@ -85,3 +85,4 @@
 
 [🏗️ Architecture](./arch/README.md)
 * [REST API](./arch/api.md)
+* [Проект](./arch/project.md)
