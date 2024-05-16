@@ -1,4 +1,4 @@
-# База знаний
+# Knowledge base
 
 [🐱 Git](./git/README.md)
 * [Настроить разную конфигурацию Git для разных проектов](./git/config.md)
@@ -82,3 +82,6 @@
 
 [🛫 Telegram Mini Apps](./telegram_mini_apps/README.md)
 * [Ссылки](./telegram_mini_apps/links.md)
+
+[🏗️ Architecture](./arch/README.md)
+* [REST API](./arch/api.md)
