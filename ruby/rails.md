@@ -301,6 +301,25 @@ bundle e rubocop -A
 bundle e rubocop --auto-gen-config
 ```
 
+###### Разрешить не замораживать строки
+
+Что бы убрать
+
+```ruby
+frozen_string_literal: true
+```
+
+```yaml
+# Разрешить не замораживать строки.
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+```
+
+```sh
+bundle e rubocop -A
+```
+
+
 ##### Красивые данные для тестов
 
 ```ruby
