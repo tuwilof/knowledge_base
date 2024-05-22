@@ -35,6 +35,9 @@
 По архитектуре
 - [Автозагрузка lib](#автозагрузка-lib)
 
+Решение возможных проблем
+- [FrozenError can't modify frozen Array](#frozenerror-cant-modify-frozen-array)
+
 #### Создать новый проект без лишних зависимостей
 
 Перейдите в нужный каталог для создания
@@ -358,3 +361,15 @@ config.active_record.dump_schema_after_migration = false
 #### Автозагрузка lib
 
 Размещайте их в директории `app/lib`
+
+### FrozenError can't modify frozen Array
+
+Ошибка может быть связана с `Zeitwerk`
+выполнит команду, для получения подробности по ошибке
+
+```sh
+bin/rails zeitwerk:check
+```
+
+в моем случае ошибка была связана с тем что я использовал акроним который не был определен
+
