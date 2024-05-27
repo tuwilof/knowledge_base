@@ -39,6 +39,7 @@
 * [Перейти к определению для Ruby](./vscode/navigate_ruby.md)
 * [Просмотр рендора MarkDown](./vscode/markdown.md)
 * [Просмотр рендора PlantUML](./vscode/plantuml.md)
+* [Горячие клавиши](./vscode/hotkey.md)
 * [Возможные ошибки](./vscode/emergency.md)
 
 [💻 Tmux](./tmux/README.md)
