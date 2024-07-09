@@ -1,4 +1,4 @@
-## 🔌 Плагины
+## 🔌 Plugins
 
 * [Chromium](./chromium.md)
 * [Thunderbird](./thunderbird.md)

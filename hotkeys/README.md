@@ -1,3 +1,3 @@
-## 🎹 Горячие клавиши
+## 🎹 Hot keys
 
 * [MacOS](./macos.md)
