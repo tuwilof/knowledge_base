@@ -1,4 +1,6 @@
-## 🌀 Плагины для Chromium
+## 🔌 Плагины
+
+### Chromium
 
 #### KeePassXC-Browser
 

@@ -87,3 +87,19 @@
 [🏗️ Architecture](./arch/README.md)
 * [REST API](./arch/api.md)
 * [Проект](./arch/project.md)
+
+## 🍽️ Инструменты
+
+* [Оборудование](./ware/hard.md)
+* [Программное обеспечение](./ware/soft.md)
+* [Онлайн инструменты](./ware/online.md)
+
+## 🔌 Плагины
+
+* [Chromium](./plugins/chromium.md)
+* [Thunderbird](./plugins/thunderbird.md)
+* [VS Code](./plugins/vscode.md)
+
+## 🎹 Горячие клавиши
+
+* [MacOS](./hotkeys/macos.md)
