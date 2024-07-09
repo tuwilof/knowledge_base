@@ -88,18 +88,18 @@
 * [REST API](./arch/api.md)
 * [Проект](./arch/project.md)
 
-## 🍽️ Инструменты
+[🍽️ Инструменты](./ware/README.md)
 
 * [Оборудование](./ware/hard.md)
 * [Программное обеспечение](./ware/soft.md)
 * [Онлайн инструменты](./ware/online.md)
 
-## 🔌 Плагины
+[🔌 Плагины](./plugins.md/README.md)
 
 * [Chromium](./plugins/chromium.md)
 * [Thunderbird](./plugins/thunderbird.md)
 * [VS Code](./plugins/vscode.md)
 
-## 🎹 Горячие клавиши
+[🎹 Горячие клавиши](./hotkeys/README.md)
 
 * [MacOS](./hotkeys/macos.md)
