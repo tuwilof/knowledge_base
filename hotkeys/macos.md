@@ -2,4 +2,7 @@
 
 ### MacOS
 
-Эмоджи [Command + Control + Пробел]
+Эмоджи [Cmd + Ctrl + Space]
+переключение языка [Ctrl + Space]
+скопировать [Cmd + C]
+вставить [Cmd + V]
