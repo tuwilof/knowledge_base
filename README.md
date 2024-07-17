@@ -94,7 +94,7 @@
 * [Программное обеспечение](./ware/soft.md)
 * [Онлайн инструменты](./ware/online.md)
 
-[🔌 Plugins](./plugins.md/README.md)
+[🔌 Plugins](./plugins/README.md)
 
 * [Chromium](./plugins/chromium.md)
 * [Thunderbird](./plugins/thunderbird.md)
