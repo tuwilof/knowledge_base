@@ -13,3 +13,11 @@
 +- похоже что можно заменить на локальные Open Source ИИ https://github.com/mudler/LocalAI
 
 https://gitverse.ru/services/gigacode
+
+#### Vim
+
++ можно использовать hjkl дляя навигации
++ есть привычные режимы vim
+- не работает залипание клавиш при hjkl
+
+https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
