@@ -18,6 +18,6 @@ https://gitverse.ru/services/gigacode
 
 + можно использовать hjkl дляя навигации
 + есть привычные режимы vim
-- не работает залипание клавиш при hjkl
+- не работает залипание клавиш при hjkl (похоже только на MacOS, на Ubuntu ок)
 
 https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
