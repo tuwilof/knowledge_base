@@ -103,3 +103,5 @@
 [🎹 Hot keys](./hotkeys/README.md)
 
 * [MacOS](./hotkeys/macos.md)
+* [Ubuntu](./hotkeys/ubuntu.md)
+* [Ubuntu Terminal](./hotkeys/ubuntu_terminal.md)
