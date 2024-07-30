@@ -5,3 +5,4 @@
 * [Настройка puma](./puma.md)
 * [Ручной запуск puma без nginx](./hand_run_puma_without_nginx.md)
 * [Возможные ошибки](./emergency.md)
+* [Гемы](./gems.md)

@@ -18,6 +18,7 @@
 * [Настройка puma](./ruby/puma.md)
 * [Ручной запуск puma без nginx](./ruby/hand_run_puma_without_nginx.md)
 * [Возможные ошибки](./ruby/emergency.md)
+* [Гемы](./gems.md)
 
 [🚀 Deploy](./deploy/README.md)
 * [Ручной деплой Ruby on Rails](./deploy/handmade.md)
