@@ -106,3 +106,9 @@
 * [MacOS](./hotkeys/macos.md)
 * [Ubuntu](./hotkeys/ubuntu.md)
 * [Ubuntu Terminal](./hotkeys/ubuntu_terminal.md)
+
+[🍀 Node](./node/README.md)
+
+* [Запуск](./node/run.md)
+* [Дебаг](./node/debug.md)
+* [Чтение файла](./node/fileread.md)
