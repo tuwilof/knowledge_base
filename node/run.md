@@ -31,3 +31,17 @@ console.log(1+1)
 ➜  ~ node test
 2
 ```
+
+#### Node modules
+
+После установки
+
+```sh
+npm install --save markdown-toc
+```
+
+можете вызывать так, например
+```sh
+node_modules/.bin/markdown-toc
+node_modules/.bin/markdown-toc -i subscription.md
+```
