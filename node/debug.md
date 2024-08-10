@@ -7,7 +7,7 @@
 * Запускаем `node` для нужного файла с настройкой `--inspect-brk`
 
 ```sh
-node --inspect-brk test.js 
+node --inspect-brk test
 ```
 
 * открываем страницу http://127.0.0.1:9229/ или любую другую
@@ -29,12 +29,14 @@ node --inspect-brk test.js
 
 ![Debug](./img/debug2.png "Debug")
 
+[ссылка на статью которая помогла](https://www.builder.io/blog/debug-nodejs)
+
 #### Точка останова
 
 Так же как и в целом дебаг
 
 ```sh
-node --inspect-brk test.js 
+node --inspect-brk test
 ```
 
 http://127.0.0.1:9229/

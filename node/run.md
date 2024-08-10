@@ -21,6 +21,13 @@ console.log(1+1)
 ```
 
 ```sh
-➜  ~ node test.js
+➜  ~ node test
+2
+```
+
+или просто
+
+```sh
+➜  ~ node test
 2
 ```
