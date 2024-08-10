@@ -2,7 +2,9 @@
 
 ### Горячие клавиши
 
-#### Автоформатирование JSON
+#### Автоформатирование
+
+JSON, JavaScript, видимо любой синтаксис
 
 Windows: Shift + Alt + F
 Mac: Shift + Option + F
