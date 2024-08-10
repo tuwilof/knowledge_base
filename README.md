@@ -106,7 +106,7 @@
 * [MacOS](./hotkeys/macos.md)
 * [Ubuntu](./hotkeys/ubuntu.md)
 * [Ubuntu Terminal](./hotkeys/ubuntu_terminal.md)
-* [Visual Studio Code](../vscode/hotkey.md)
+* [Visual Studio Code](./vscode/hotkey.md)
 
 [🍀 Node](./node/README.md)
 

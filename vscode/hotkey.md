@@ -6,6 +6,8 @@
 
 JSON, JavaScript, видимо любой синтаксис
 
-Windows: Shift + Alt + F
-Mac: Shift + Option + F
-Linux: Ctrl + Shift + I
+|ОС|Комбинация|
+|-|-|
+| Windows | Shift + Alt + F |
+| Mac | Shift + Option + F |
+| Linux | Ctrl + Shift + I |
