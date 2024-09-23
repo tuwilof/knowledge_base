@@ -1,0 +1,1 @@
+https://dev.vk.com/ru/admin/apps-list
