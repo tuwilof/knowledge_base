@@ -36,6 +36,12 @@ https://www.thunderbird.net/ru/
 * много плагинов
 * кросплатформенность
 
+#### UnnaturalScrollWheels
+
+Что бы инверсировать срок мыши на маке
+
+https://github.com/ther0n/UnnaturalScrollWheels
+
 #### UTM
 
 https://mac.getutm.app/
