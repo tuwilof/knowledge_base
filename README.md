@@ -36,7 +36,7 @@
 * [Возможные ошибки](./postgresql/emergency.md)
 
 [📑 Visual Studio Code](./vscode/README.md)
-* [Настроить запуск в консоли](./vscode/setting.md)
+* [Настройки](./vscode/setting.md)
 * [Перейти к определению для Ruby](./vscode/navigate_ruby.md)
 * [Просмотр рендора MarkDown](./vscode/markdown.md)
 * [Просмотр рендора PlantUML](./vscode/plantuml.md)
