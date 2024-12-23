@@ -1,5 +1,5 @@
 ## 💎 Ruby
-* [Установка rbenv](./install.md)
+* [Установка ruby](./install.md)
 * [Про Ruby on Rails](./rails.md)
 * [Настройка rails_semantic_logger](./semantic_logger.md)
 * [Настройка puma](./puma.md)
