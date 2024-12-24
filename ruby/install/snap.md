@@ -5,7 +5,7 @@
 При проверки версии Ruby даже на старой версии Ubuntu 20.04, будет предложена установка Ruby через snap
 
 ```sh
-dima@afishium:~$ ruby -v
+$ ruby -v
 
 Command 'ruby' not found, but can be installed with:
 
@@ -18,7 +18,7 @@ See 'snap info ruby' for additional versions.
 проверьте доступные версии Ruby, командой `snap info ruby`
 
 ```sh
-dima@afishium:~$ snap info ruby
+$ snap info ruby
 name:      ruby
 summary:   Interpreter for the Ruby programming language
 publisher: Ruby core team (rubylang✓)
@@ -76,3 +76,15 @@ channels:
 то есть как видите не доступен весь набор версий, как правило десяток последних минорных версий
 
 вероятно вам нужно будет сначала произвести обновление версии Ruby в свом проекте
+
+так же как видите выбора состоит из каналов, то есть например можете установить из нужного канала можете так
+
+```sh
+sudo snap install ruby --channel=3.1/stable --classic
+```
+
+и можете еще раз проверить доступную версию Ruby
+```sh
+$ ruby -v
+ruby 3.1.6p260 (2024-05-29 revision a777087be6) [x86_64-linux]
+```
