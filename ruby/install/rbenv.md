@@ -111,3 +111,18 @@ gem install bundler
 ```sh
 rbenv install
 ```
+
+установите `bundler`
+```sh
+gem install bundler
+```
+
+запустите установку гемов
+```sh
+bundle
+```
+
+проверьте тесты
+```sh
+bundle e rspec
+```

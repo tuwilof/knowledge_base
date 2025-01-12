@@ -88,3 +88,13 @@ sudo snap install ruby --channel=3.1/stable --classic
 $ ruby -v
 ruby 3.1.6p260 (2024-05-29 revision a777087be6) [x86_64-linux]
 ```
+
+#### Пример для Ansible
+
+```yaml
+- name: Установить Ruby через Snap
+  become: true  # Поднимаем привилегии до sudo
+  block:
+    - name: Установить Ruby
+      command: snap install ruby --channel=3.1/stable --classic
+```
