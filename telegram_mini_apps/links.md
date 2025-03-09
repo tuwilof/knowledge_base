@@ -14,3 +14,7 @@
 | Липкое приложение | https://docs.telegram-mini-apps.com/platform/sticky-app |
 | Тестовая среда | https://docs.telegram-mini-apps.com/platform/test-environment |
 | Создание нового приложения | https://docs.telegram-mini-apps.com/platform/creating-new-app |
+| Mate — это многофункциональный инструмент для разработчиков на платформе Telegram Mini Apps, который решает широкий спектр задач | https://docs.telegram-mini-apps.com/packages/telegram-apps-mate |
+| Хостинг | https://docs.telegram-mini-apps.com/packages/telegram-apps-mate/hosting |
+| Методы | https://docs.telegram-mini-apps.com/platform/methods |
+| Тестирование мини-приложений | https://docs.ton.org/v3/guidelines/dapps/tma/guidelines/testing-apps |

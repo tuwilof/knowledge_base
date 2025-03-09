@@ -27,4 +27,19 @@
 
 на телефоне такой вариант еще не будет работать, так как адрес локальный, надо установить публичный домен через специальные библоитеки
 
-#### 
+#### Как првоерить МВП на телефоне
+
+* Подробнее
+  * https://docs.telegram-mini-apps.com/packages/telegram-apps-mate
+  * https://docs.telegram-mini-apps.com/packages/telegram-apps-mate/hosting
+* перейдите в каталог с мини приложением
+  * установите `yarn add -D @telegram-apps/mate`
+  * проверьте что установился `yarn mate -h`
+* перейдите в бота https://t.me/tma_mate_bot
+  * создайте проект
+  * сохраните токен
+  * укажите в проекте домен новый
+* перейдите в каталог с мини приложением
+  * проверьте `yarn mate deploy info --token token --project project --tag latest`
+  * соберите `yarn run build`
+  * задеплойте `yarn mate deploy upload --dir dist --token token --project project --tag latest`
