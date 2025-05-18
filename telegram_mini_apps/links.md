@@ -22,3 +22,4 @@
 | @telegram-apps/telegram-ui | https://github.com/Telegram-Mini-Apps/TGUI-Example |
 | @telegram-apps/telegram-ui | https://tgui.xelene.me/?path=/docs/getting-started--documentation |
 | @telegram-apps/telegram-ui | https://www.figma.com/community/file/1348989725141777736 |
+| widgets post | https://core.telegram.org/widgets/post |

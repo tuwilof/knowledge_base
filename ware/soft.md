@@ -94,3 +94,11 @@ https://github.com/localtunnel/localtunnel
 
 https://youtu.be/z11SoJAmV0U?si=op8OtxCIaW37n1wZ&t=173
 
+#### Negative 
+
+pdf dark reader macos
+
+https://apple.stackexchange.com/questions/317845/is-there-the-dark-mode-inverted-colors-in-the-preview-application-for-pdf-re
+
+https://apps.apple.com/us/app/negative/id1378123825?mt=12
+
