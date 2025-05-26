@@ -109,6 +109,11 @@ gem install bundler
 Поменяте в проекте автозаменой старую версию на новую и вызовите команду
 
 ```sh
+#macos
+brew upgrade ruby-build
+```
+
+```sh
 rbenv install
 ```
 
