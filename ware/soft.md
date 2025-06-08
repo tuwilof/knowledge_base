@@ -94,6 +94,12 @@ https://github.com/localtunnel/localtunnel
 
 https://youtu.be/z11SoJAmV0U?si=op8OtxCIaW37n1wZ&t=173
 
+#### ngrok
+
+```sh
+ngrok http 5173
+```
+
 #### Negative 
 
 pdf dark reader macos
